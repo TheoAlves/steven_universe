@@ -1,0 +1,126 @@
+html, body, h1, h2, h3, h4, h5, h6, p, li, ol, ul, pre {
+	margin: 0;
+	padding: 0;
+}
+html, body { min-height: 100%; }
+
+body {
+	background-color: FFC0CB;
+	font-family: 'Lato', sans-serif;
+	font-size: 62.5%;
+	padding: 0;
+	box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+  width:20px;            
+}
+
+body::-webkit-scrollbar-track {
+  background: #BCB4B6;        
+}
+body::-webkit-scrollbar-thumb {
+  background-color: white;    
+  border-radius: 6px;        
+}
+/* Appearance */
+.links {
+	background-color: #FFC0CB;
+	border-bottom: 1px solid #0003;
+	box-shadow: 0 0 32px #0003;
+	font-size: 2em;
+	font-weight: 300;
+}
+.links > a {
+	color: black;
+	padding: .75em;
+	text-align: center;
+	text-decoration: none;
+	transition: all .5s;
+}
+.links > a:hover {
+	background: #BCB4B6;
+	color: white;
+}
+.links > .line {
+	background:F744B5;
+	height: 1px;
+	pointer-events: none;
+}
+
+/* The Magic */
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.links {
+	display: grid;
+	grid-template-columns: repeat(var(--items), 1fr);
+	position: relative;
+}
+.links > .line {
+	opacity: 0;
+	transition: all .5s;
+	position: absolute;
+	bottom: 0;
+	left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
+	width: var(--width, calc(100% / var(--items)));
+	--index: 0;
+}
+
+h1{
+	font-size: 30px;
+}
+h4{
+	font-size: 15px;
+}
+footer {
+    
+    bottom: 0;
+    background-color: #BCB4B6;
+    color: #FFF;
+    width: 100%;
+    height: 150px;    
+    text-align: center;
+    line-height: 40px;
+}
+.icones-sociais  li{
+    display: inline-block;
+    float: center;
+    width: 50px;
+    height: 10px;
+}
+.imag{
+ float:right; 
+ margin-right:35px; 
+ margin-left:20px; 
+ margin-bottom:5px;
+ margin-top:10px;
+}
+h1{
+ font-size: 50px;
+}
+.gif ul li{
+	display: inline-block;
+    width: 200px;
+    height: 100px;
+}
+.cur{
+	margin:40px;;
+}
+h2{
+	font-size: 20px;
+}
+.subir {
+	background-color:#BCB4B6;
+	padding: 10px;
+	font-size: 15px;
+	text-decoration: none;
+	color: black;
+	border-radius: 7px;
+}
+.subir:hover{
+	background: white;
+	
+}
